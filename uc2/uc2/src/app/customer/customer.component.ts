@@ -9,12 +9,19 @@ import { from } from 'rxjs';
 })
 export class CustomerComponent implements OnInit {
   register;
+  input;
   constructor(private customerservice:CustomerService) { }
 
   ngOnInit(): void {
+    
     this.register={
-      username:'',
-      phone_no:''
+      user:{
+        username:'',
+        password:'',
+        first_name:'',
+        last_name:''
+      },
+      phone_no:'' 
 
     };
   }
@@ -29,5 +36,5 @@ export class CustomerComponent implements OnInit {
     );
 
   }
-
+  
 }

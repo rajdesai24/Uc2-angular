@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ProviderService} from '../provider.service'
 import { from } from 'rxjs';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-provider',
   templateUrl: './provider.component.html',
@@ -9,7 +10,7 @@ import { from } from 'rxjs';
 export class ProviderComponent implements OnInit {
 
   register;
-  constructor(private providerservice:ProviderService) { }
+  constructor(private providerservice:ProviderService,private router:Router) { }
 
   ngOnInit(): void {
     this.register={
@@ -17,8 +18,10 @@ export class ProviderComponent implements OnInit {
       password:'',
       first_name:'',
       last_name:'',
-      
-    };
+  };
+  }
+  redirect() {
+    this.router.navigate(['/choice']);
   }
   registeruser(){
     this.providerservice.register(this.register).subscribe(

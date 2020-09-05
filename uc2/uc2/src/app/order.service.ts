@@ -4,12 +4,12 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class CustomerService {
-  constructor(private http:HttpClient) {}
-  
-  register(userdata):Observable<any>{
+
+export class OrderService {
+
+  constructor(private http:HttpClient) { }
+  order(userdata):Observable<any>{
     
-    return this.http.post('http://localhost:8000/post/customer',userdata)
+    return this.http.post('http://localhost:8000/order/post',userdata)
   }
- 
 }

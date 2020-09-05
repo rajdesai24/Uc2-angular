@@ -1,3 +1,7 @@
-<input [(ngModel)]="register.username" placeholder="username">
+<input [(ngModel)]="register.user.username" placeholder="username">
+<input [(ngModel)]="register.user.password" placeholder="password">
 <input [(ngModel)]="register.phone_no" placeholder="phone_no">
+<input [(ngModel)]="register.user.first_name" placeholder="first_name">
+<input [(ngModel)]="register.user.last_name" placeholder="last_name">
+
 <button (click)="registeruser()">Register User</button>

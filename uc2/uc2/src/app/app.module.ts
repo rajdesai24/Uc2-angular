@@ -8,11 +8,18 @@ import { importType } from '@angular/compiler/src/output/output_ast';
 import { CustomerService } from './customer.service';
 import {HttpClientModule} from '@angular/common/http';
 import { ProviderComponent } from './provider/provider.component';
+import { OrderComponent } from './order/order.component';
+import { LoginComponent } from './login/login.component';
+import { ChoicefillComponent } from './choicefill/choicefill.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     CustomerComponent,
     ProviderComponent,
+    OrderComponent,
+    LoginComponent,
+    ChoicefillComponent,
   ],
   imports: [
     BrowserModule,
@@ -20,7 +27,6 @@ import { ProviderComponent } from './provider/provider.component';
     FormsModule,
     HttpClientModule
   ],
-  exports:[CustomerComponent],
   providers: [CustomerService],
   bootstrap: [AppComponent]
 })
